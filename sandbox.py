@@ -20,6 +20,8 @@ for i in cipher_lst:
     word_len = len(i)
     cipher_len_lst.append(word_len)
 
+#order the cipher_len_lst by its length.
+ord_cipher_len_lst = np.sort(cipher_len_lst)
 
 #changing the cipher_len_lst in to an array.
 cipher_len_array = np.array(cipher_len_lst)
@@ -33,6 +35,7 @@ ord_cipher_len_ary = np.sort(cipher_len_array)
 ord_cipher_lst= sorted(cipher_lst,key=len)
 ord_cipher_ary = np.array(ord_cipher_lst)
 
+
 #we have the cipher array, ordered cipher array, length of the cipher array and the length of the ordered cipher array.
 print(cipher_ary)
 print(ord_cipher_ary)
@@ -42,3 +45,9 @@ print(ord_cipher_len_ary)
 # to make dictionary.
 my_dict = dict(zip(cipher_ary,ord_cipher_ary))
 print(my_dict)
+
+# but this dictionary is not so helpfull to solve the problem. Hence we use the length array.
+for s in range(len(cipher_len_lst)):
+    for t in range(len(ord_cipher_len_ary)):
+        print(cipher_len_lst[s]==ord_cipher_len_lst[t])
+
