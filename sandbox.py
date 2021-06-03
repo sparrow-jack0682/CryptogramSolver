@@ -39,3 +39,6 @@ print(ord_cipher_ary)
 print(cipher_len_array)
 print(ord_cipher_len_ary)
 
+# to make dictionary.
+my_dict = dict(zip(cipher_ary,ord_cipher_ary))
+print(my_dict)
