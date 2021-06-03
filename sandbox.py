@@ -10,8 +10,7 @@ cipher_acceptor = "g fytc y bmg "
 cipher_lst = cipher_acceptor.split()
 
 
-# create an array from the above list.
-# cipher_ary = np.array(cipher_lst)
+
 
 
 # create a length array from the cipher_array.
@@ -23,17 +22,15 @@ print(cipher_len_lst)
 #order the cipher_len_lst by its length.
 ord_cipher_len_lst = sorted(cipher_len_lst)
 
-#changing the cipher_len_lst in to an array.
-# cipher_len_array = np.array(cipher_len_lst)
 
 
-# order the elements of cipher_len_ary.
-# ord_cipher_len_ary = sorted(cipher_len_array)
+
+
 
 
 #ordering cipher_ary by its length.
 ord_cipher_lst= sorted(cipher_lst,key=len)
-# ord_cipher_ary = np.array(ord_cipher_lst)
+
 
 
 #we have the cipher array, ordered cipher array, length of the cipher array and the length of the ordered cipher array.
