@@ -50,6 +50,7 @@ def cipher_acceptor():
     global cipher
     # Get an input from the user
     cipher = input("Enter the cipher:\n")
+    print(type(cipher))
     # Make sure the user does not want to not quitting, and quit if a cipher is not entered
     if not (cipher == 'X' or cipher == 'x' or cipher is None or cipher == ''):
         # Check if input follows RegEx for a typical cryptoquip
@@ -80,6 +81,7 @@ def clue_acceptor():
             # Split at '=' and save the first part [0] as key and the second part [1] as value
             clue_key = re.split("=", clue)[0]
             clue_value = re.split("=", clue)[1]
+            print(clue_key,clue_value)
         elif not (clue == 'X' or clue == 'x'):
             # If the clue is not of the format we need
             print("\nSomething is wrong with your clue. Please re-enter the clue.\n\n")
@@ -94,7 +96,6 @@ def clue_acceptor():
         # If the clue is blank
         print("\nYou have not entered a clue. Please retry or hit 'X' to quit.\n\n")
         clue_acceptor()
-
 
 def main():
     # Call acceptor() to accept an input cipher
