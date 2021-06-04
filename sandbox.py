@@ -4,47 +4,34 @@
 # 6. COMPARE ORIGINAL ARRAY AND ORDERED ARRAY AND BUILD A DICTIONARY TO REMEMBER ORIGINAL ORDERING (SPK).
 
 
-cipher_acceptor = "g fytc y bmg "
-
-#create list of word that are their in the cipher_acceptor.
-cipher_lst = cipher_acceptor.split()
-
+original_list = ['g', 'fytc','ghjdg', 'y', 'bmg']
+length_sorted_list = []
+dictionary_memory = {}
 
 
+def sort_list_by_length():
+    temp_list = []
+    global original_list
+    for i in range(0, len(original_list)):
+        temp_list.insert(i, sorted(original_list, key=len)[i])
+    return temp_list
 
 
-# create a length array from the cipher_array.
-cipher_len_lst = [] #create an empty list
-for i in cipher_lst:
-    word_len = len(i)
-    cipher_len_lst.append(word_len)
-print(cipher_len_lst)
-#order the cipher_len_lst by its length.
-ord_cipher_len_lst = sorted(cipher_len_lst)
-
-
-
+def dictionary_builder(original, compare):
+    for original_element in original:
+        for compare_element in compare:
+            if  (original_element)==(compare_element):
+                dictionary_memory[original.index(original_element)] =  compare.index(compare_element)
 
 
 
 
-#ordering cipher_ary by its length.
-ord_cipher_lst= sorted(cipher_lst,key=len)
-
-
-
-#we have the cipher array, ordered cipher array, length of the cipher array and the length of the ordered cipher array.
-print(cipher_lst)
-print(ord_cipher_lst)
-print(cipher_len_lst)
-print(ord_cipher_len_lst)
-
-# to make dictionary.
-my_dict = dict(zip(cipher_lst,ord_cipher_lst))
-print(my_dict)
-
-# but this dictionary is not so helpfull to solve the problem. Hence we use the length array.
-for s in range(len(cipher_len_lst)):
-    for t in range(len(ord_cipher_len_lst)):
-        print(cipher_len_lst[s]==ord_cipher_len_lst[t])
+if __name__ == '__main__':
+    print(original_list)
+    length_sorted_list = sort_list_by_length().copy()
+    print(length_sorted_list)
+    dictionary_builder(original_list, length_sorted_list)
+    # print(original_list)
+    # print(length_sorted_list)
+    print(str(dictionary_memory))
 
