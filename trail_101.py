@@ -14,9 +14,9 @@ from PyDictionary import PyDictionary as pyd
 #         print('word exists')
 #     else : print('word does not exists')
 
-# alphabets = 'a b c d e f g h i j k l m n o p q r s t u v w x y z'
-# alphabets_lst = alphabets.split()
-# print(alphabets_lst[0],range(len(alphabets_lst)))
+alphabets = 'a b c d e f g h i j k l m n o p q r s t u v w x y z'
+alphabets_lst = alphabets.split()
+print(alphabets_lst[0],range(len(alphabets_lst)))
 
 word = ['gq']
 
@@ -45,10 +45,10 @@ for i in range(len(alphabets_lst)):
 print(asp_lst)
 
 
-for i in range(len(asp_lst)):
-    if (pyd.meaning(asp_lst[i])) != None :
-        print('word exists')
-    else : print('word does not exists')
+# for i in range(len(asp_lst)):
+#     if (pyd.meaning(asp_lst[i])) != None :
+#         print('word exists')
+#     else : print('word does not exists')
 
 
 
