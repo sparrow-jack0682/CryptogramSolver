@@ -1,7 +1,7 @@
 # using regular expressions
 import re
 
-global l
+
 
 input_cipher = "hjgjkls"
 l = len(input_cipher)
