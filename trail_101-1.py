@@ -3,7 +3,7 @@ import re
 
 global l
 
-input_cipher = "hjg"
+input_cipher = "hjgjkls"
 l = len(input_cipher)
 
 my_text = """" a 
