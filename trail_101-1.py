@@ -1,36 +1,28 @@
 # using regular expressions
 import re
 
+cipher = "asd"
+print(len(cipher))
+
+fileObject = open("words_alpha.txt", "r")
+data = fileObject.read()
+# print(data)
 
 
-input_cipher = "hjgjkls"
-l = len(input_cipher)
+# patterns = re.compile(r'(.){3,}')
+# matches = patterns.finditer(data)
+# lines = data.split('\n')
+#
+# for line in lines:
+#     rxx = patterns.search(line)
+#     if rxx:
+#         print(line)
 
-my_text = """" a 
-aa
-aaa
-suhas
-b
-bb
-bbb
-xlgkx
-c
-cc
-ccc
+words = data.split()
+# print(words)
 
-
-"""
-
-
-
-patterns = re.compile(r'(.){5,}')
-# matches = patterns.finditer(my_text)
-lines = my_text.split('\n')
-
-for line in lines:
-    rxx = patterns.search(line)
-    if rxx:
-        print(line)
-
+for wordi in range(len(words)):
+    if len(words[wordi])==len(cipher):
+        print(words[wordi])
 
 
